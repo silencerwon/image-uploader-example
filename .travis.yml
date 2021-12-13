@@ -35,7 +35,7 @@ deploy:
     key: image-api-interface.zip
     bundle_type: zip
     application: silencer-codedeploy-silencer-was
-    deploy_group: silencer-codedeploy-silencer-was-group
+    deployment_group: silencer-codedeploy-silencer-was-group
     region: ap-northeast-2
     wait-until-deployed: true
 
