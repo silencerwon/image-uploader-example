@@ -1,3 +1,5 @@
+import org.springframework.boot.gradle.tasks.bundling.BootJar
+
 plugins {
     kotlin("jvm")
     kotlin("kapt")
@@ -16,3 +18,9 @@ dependencies {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
 }
+
+val jar: Jar by tasks
+val bootJar: BootJar by tasks
+
+bootJar.enabled = false
+jar.enabled = true
