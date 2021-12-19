@@ -1,13 +1,12 @@
 #!/bin/bash
 
 USER_HOME=/home/ec2-user
-DOWNLOAD_PATH=$USER_HOME/downloads
+DOWNLOAD_PATH=$USER_HOME/downloaded
 DEPLOY_PATH=$USER_HOME/deploy
 PROJECT_NAME=image-api
-INTERFACE_MODULE_NAME=image-api-interface
 
 echo "> 1. Copy application jar files"
-cp $DOWNLOAD_PATH/$INTERFACE_MODULE_NAME/build/libs/*.jar $DEPLOY_PATH/
+cp $DOWNLOAD_PATH/*.jar $DEPLOY_PATH/
 
 echo "> 2. Check current pid"
 CURRENT_PID=$(pgrep -fl ${PROJECT_NAME} | grep jar | awk '{print $1}')
