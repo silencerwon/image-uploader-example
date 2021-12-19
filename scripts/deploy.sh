@@ -29,4 +29,4 @@ echo "chmod +x $JAR_NAME"
 chmod +x $JAR_NAME
 
 echo "execute $JAR_NAME"
-nohup java -jar $JAR_NAME 2>&1 &
+nohup java -jar $JAR_NAME > ~/logs/spring/spring.log 2>&1 &
