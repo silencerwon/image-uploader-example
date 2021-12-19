@@ -7,6 +7,7 @@ plugins {
 }
 
 dependencies {
+    implementation(project(":image-api-core"))
     implementation(kotlin("stdlib"))
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
