@@ -9,7 +9,7 @@ echo "> 1. Copy application jar files"
 cp $DOWNLOAD_PATH/*.jar $DEPLOY_PATH/
 
 echo "> 2. Check current pid"
-CURRENT_PID=$(pgrep -fl ${PROJECT_NAME} | grep jar | awk '{print $1}')
+CURRENT_PID=$(pgrep -fl ${PROJECT_NAME} | awk '{print $1}')
 echo "Current pid is ${CURRENT_PID}"
 
 if [ -z "$CURRENT_PID" ]; then
